@@ -7,9 +7,17 @@ use GDO\Dog\DOG_Server;
 final class MailConnector extends DOG_Connector
 {
 
+    private $imap;
+
     public function init(): bool
     {
-        // TODO: Implement init() method.
+        $username = $this->server->getUsername();
+        $password = $this->server->getPassword();
+        $connectstring = "";
+        if ($this->imap = imap_open($connectstring, $username, $password))
+        {
+            return true;
+        }
     }
 
     public function connect(): bool
