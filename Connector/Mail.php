@@ -4,7 +4,7 @@ namespace GDO\DogMail;
 use GDO\Dog\DOG_Connector;
 use GDO\Dog\DOG_Server;
 
-final class MailConnector extends DOG_Connector
+final class Mail extends DOG_Connector
 {
 
     private $imap;
